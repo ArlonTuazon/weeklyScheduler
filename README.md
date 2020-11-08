@@ -11,7 +11,7 @@
   * JQuery
 
   ## Screenshot
-    <img src ="./weeklyScheduler/weeklyscheduler.png" alt="Scheduler screenshot">
+    <img src ="weeklyscheduler.png" alt="Scheduler screenshot">
 
   ## Live URL
 
