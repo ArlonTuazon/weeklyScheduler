@@ -12,7 +12,7 @@ function saveSchedule() {
     localStorage.setItem("wdaySchedule", JSON.stringify(wdaySchedule));
 }
 
-//displays data in time slots
+//displays data in hour column
 function dispSchedule() {
     wdaySchedule.forEach(function (hour) {
         $("#" + hour.id).val(hour.dataSched)
@@ -31,14 +31,14 @@ function loadSchedule() {
     dispSchedule()
 }
 
-//for loop to create array for loop
+//create array for loop
 for (time = 9; time <= 17; time++) {
-    //get index and set variable to store data in array
+    // index and variable to store data in array
     var id = time - 9
     var dataSched = ""
    
 
-   //Get display time 
+   //Getting display time 
    var displayHour = 0;
    var meridiem = "";
 
@@ -102,12 +102,12 @@ wdaySchedule.forEach(function(hour) {
     console.log(hourData)
     // create save button for end of row
     var saveIcon = $("<i class='far fa-save fa-lg'></i>")
-    var saveEnd = $("<button>")
+    var saveCol = $("<button>")
         .addClass("col-md-1 saveBtn");
 
     //append elements to row 
-    saveEnd.append(saveIcon);    
-    hourRow.append(hourField, hourInput, saveEnd)
+    saveCol.append(saveIcon);    
+    hourRow.append(hourField, hourInput, saveCol)
 })
   
      //saving the correct information into array
@@ -121,7 +121,5 @@ wdaySchedule.forEach(function(hour) {
 })
 console.log(saveSchedule);
 
-//get current date on page load
 getCurrentDate()
-//load data for page load
 loadSchedule()
