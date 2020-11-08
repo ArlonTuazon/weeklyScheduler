@@ -71,6 +71,47 @@ console.log(displayHour);
    console.log(meridiem);
 
 
+wdaySchedule.forEach(function(hour) {
+    // creates row
+    var hourRow = $("<form>")
+        .addClass("row");
+
+    $(".container").append(hourRow);
+
+    //creates field for time
+    var hourField = $("<div>")
+        .addClass("col-md-2 hour")
+        .text(hour.displayHour + hour.meridiem);
+
+    // creates tasks schdedule
+    var hourInput = $("<div>")
+        .addClass("col-md-9 description p-0")
+    var hourData = $("<textarea>");
+        hourData.attr("id", hour.id);
+    
+        //time color codes
+        if (hour.time == moment().format("HH")) {
+            hourData.addClass("present")
+        } else if (hour.time < moment().format("HH")) {
+                hourData.addClass("past")
+        } else if (hour.time > moment().format("HH")) {
+            hourData.addClass("future")
+    }
+
+    hourInput.append(hourData);
+    console.log(hourData)
+    // create save button for end of row
+    var saveIcon = $("<i class='far fa-save fa-lg'></i>")
+    var saveEnd = $("<button>")
+        .addClass("col-md-1 saveBtn");
+
+    //append elements to row 
+    saveEnd.append(saveIcon);    
+    hourRow.append(hourField, hourInput, saveEnd)
+})
+  
+    
+console.log(saveSchedule);
 
 //get current date on page load
 getCurrentDate()
