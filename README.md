@@ -11,8 +11,9 @@
   * JQuery
 
   ## Screenshot
-    <img src ="weeklyscheduler.png" alt="Scheduler screenshot">
+    <img src ="C:\Users\nikka\Desktop\challenges\fifth-assign\weeklyScheduler\weeklyscheduler.png" alt="Scheduler screenshot">
 
   ## Live URL
-
+  ### https://arlontuazon.github.io/weeklyScheduler
   ## Github URL
+  ###  https://github.com/ArlonTuazon/weeklyScheduler
