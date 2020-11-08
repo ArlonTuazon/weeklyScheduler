@@ -110,7 +110,15 @@ wdaySchedule.forEach(function(hour) {
     hourRow.append(hourField, hourInput, saveEnd)
 })
   
+     //saving the correct information into array
+     $(".saveBtn").on("click", function(event) {
+    var saveIndex = $(this).siblings(".description").children().attr("id");
+    wdaySchedule[saveIndex].dataSched = $(this).siblings(".description").children().val();
     
+    saveSchedule();
+    dispSchedule();
+    
+})
 console.log(saveSchedule);
 
 //get current date on page load
