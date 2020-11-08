@@ -11,7 +11,7 @@
   * JQuery
 
   ## Screenshot
-    <img src ="develop\weeklyscheduler.png" alt="Scheduler screenshot">
+    <img src ="develop\weeklyscheduler.png" alt="Scheduler screenshot"/>
 
   ## Live URL
   ### https://arlontuazon.github.io/weeklyScheduler
